@@ -7,10 +7,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd ">
         
-        <context:annotation-config />
-        <bean class="com.springcore.autowire.annotation.Address" name="address" p:street="First Street" p:city="Modinagar" />
-        
-        <bean class="com.springcore.autowire.annotation.Address" name="address2" p:street="Second Street" p:city="Delhi" />
-        <bean class="com.springcore.autowire.annotation.Emp" name="emp1" />
+
+        <context:component-scan base-package="com.springcore.stereotype" />
         
  </beans>

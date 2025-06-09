@@ -1,0 +1,56 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd ">
+        
+        <util:list list-class="java.util.ArrayList" id="ph">
+        	<value>987658734</value>
+		    <value>987658888</value>
+        </util:list>
+        
+        <util:map map-class="java.util.TreeMap" id="cou">
+			<entry key="1" value="Java"></entry>
+			<entry key="2" value="Spring Framework"></entry>
+        </util:map>
+        
+        <util:set set-class="java.util.HashSet" id="add">
+	        <value>Delhi</value>
+			<value>Modinagar</value>
+        </util:set>
+
+        <bean class="com.springcore.standalone.collection.Emp" name="emp1" p:name="Pinku">
+        <property name="phones" ref="ph" />
+        <property name="course" ref="cou" />
+        <property name="address" ref="add" />
+        <!-- <property name="phones">
+	        <list>
+		        <value>987658734</value>
+		        <value>987658888</value>
+	        </list>
+        </property> -->
+        
+       <!--  <property name="address">
+	        <set>
+		        <value>Delhi</value>
+		        <value>Modinagar</value>
+	        </set>
+        </property>
+        
+        <property name="course">
+	        <map>
+		        <entry key="1" value="Java"></entry>
+		        <entry key="2" value="Spring Framework"></entry>
+	        </map>
+        </property> -->
+        
+        
+        </bean> 
+        
+ </beans>
